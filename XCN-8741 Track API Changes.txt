@@ -1,0 +1,28 @@
+XCN-8741
+Отслеживать изменения в API
+Subtask of: × XCN-8274
+ изучить https://github.com/tomzx/php-semver-checker
+ сделать форк библиотеки к нам в bitbucket
+ Модифицировать библиотеку https://github.com/tomzx/php-semver-checker , она должна уметь работать с git diff, сейчас она сравнивает две папки
+Attach file… drag files or paste image (Ctrl + V)
+Comments2
+History
+Linked Issues1
+Similar Issues
+Time Tracking
+VCS Changes1
+ :)  Ruslan Iskhakov  19 Mar 2018 13:56
+Sergei Sysylyatin 
+
+измененное задание:
+ создать таск для robo сheckapi
+ должен принимать на вход версию коммита
+ использовать библиотеку https://github.com/tomzx/php-semver-checker  без изменений (через composer подключить)
+ для того чтобы получить код переданного коммита надо воспользоваться командой git archive
+ :)  Sergei Sysylyatin  20 Mar 2018 11:53
+russoz [10:30 AM]
+команда git archive тебе отдаст архив со всеми файлами конкретного коммита (исключая папку .git)
+распаковывай его где-нибудь в output, вот тебе и состояние before
+состояние after это то что сейчас уже есть у тебя в папке next
+
+команда git archive --format=tar номер_коммита
